@@ -1,6 +1,6 @@
 import React from "react";
-import Link from "next/link";
-import { TableCell, TableRow } from "@mui/material";
+import { useRouter } from "next/navigation";
+import { Button, TableCell, TableRow } from "@mui/material";
 import { ICharacter } from "@/types/characters/character.type";
 import styles from "../styles.module.scss";
 import { useCharacterStore } from "../../../context/zustand/character/useCharacterStore";
@@ -10,6 +10,7 @@ interface Props {
 }
 
 const Character: React.FC<Props> = ({ character }) => {
+  const router = useRouter();
   const { addVisitedCharacter } = useCharacterStore();
   return (
     <TableRow key={character?.id}>
@@ -20,13 +21,15 @@ const Character: React.FC<Props> = ({ character }) => {
       <TableCell align="center">{character?.gender}</TableCell>
       <TableCell align="center">{character?.location?.name}</TableCell>
       <TableCell align="center">
-        <Link
-          href={`/characters/${character?.id}`}
-          className={styles.link_redirect}
-          onClick={() => addVisitedCharacter(character)}
+        <Button
+          className={styles.button_redirect}
+          onClick={() => {
+            addVisitedCharacter(character);
+            router.push(`/characters/${character?.id}`);
+          }}
         >
           Ver detalles
-        </Link>
+        </Button>
       </TableCell>
     </TableRow>
   );
