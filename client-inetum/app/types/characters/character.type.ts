@@ -14,6 +14,8 @@ export interface ICharacter {
     url: string;
   };
   image: string;
+  url: string;
+  created: string;
   episode: string[];
 }
 
