@@ -39,7 +39,7 @@ app/
 
 1. Clonar el repositorio.
 
-2. Entrar a la carpeta del repositorio clonado desde la consola (cmd) o terminal y ejecutar el comando `npm i` para instalar las dependencias.
+2. Entrar a la carpeta del repositorio clonado dentro de la carpeta `client-inetum` desde la consola (cmd) o terminal y ejecutar el comando `npm i` para instalar las dependencias.
 
 3. Ejecutar el comando `npm run build` para compilar el proyecto.
 
