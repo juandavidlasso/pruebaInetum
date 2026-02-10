@@ -28,7 +28,9 @@ const CharacterDetail: React.FC<Props> = ({ character, location }) => {
         Detalle del personaje
       </Typography>
       <Box sx={{ width: "100%" }}>
-        <Card sx={{ width: "100%" }}>
+        <Card
+          sx={{ width: "100%", boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px" }}
+        >
           <CardContent>
             <Grid container spacing={2}>
               <Grid

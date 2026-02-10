@@ -4,10 +4,14 @@ import { fetchCharacterById } from "@/services/characters/character.service";
 import { fetchLocationById } from "@/services/location/location.service";
 import SkeletonLoader from "@/shared/Skeleton";
 
-const DynamicCharacterDetailView = dynamic(() =>
-  import("@/modules/characters/components/CharacterDetail").then(
-    (mod) => mod.default,
-  ),
+const DynamicCharacterDetailView = dynamic(
+  () =>
+    import("@/modules/characters/components/CharacterDetail").then(
+      (mod) => mod.default,
+    ),
+  {
+    loading: () => <SkeletonLoader />,
+  },
 );
 
 interface Props {

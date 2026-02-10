@@ -8,6 +8,7 @@ import Loader from "@/shared/Loader";
 import { CharactersResponse } from "@/types/characters/character.type";
 import FilterInput from "./components/FilterInput";
 import CharacterTable from "./components/CharacterTable";
+import CharacterVisited from "./components/CharacterVisited";
 
 interface Props {
   initialData: CharactersResponse;
@@ -27,6 +28,8 @@ const CharactersView: React.FC<Props> = ({ initialData }) => {
 
   return (
     <Box className={styles.container_characters}>
+      <CharacterVisited />
+
       <Typography variant="h2" component={"h2"} className={styles.title}>
         Listado de personajes
       </Typography>

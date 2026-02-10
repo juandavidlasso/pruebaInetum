@@ -21,21 +21,50 @@ $color-secondary: #5f24c6;
 
   .container_table {
     width: 100%;
-    padding: 10px;
+    padding: 10px 0px;
+  }
 
-    .link_redirect {
-      background: $color-primary;
-      padding: 8px 12px;
-      border-radius: 14;
-      color: #fff;
-      @media screen and (max-width: 1024px) {
-        display: block;
+  .container_visited {
+    width: 100%;
+    padding: 10px 0px;
+
+    .carousel {
+      width: 100%;
+      text-align: center;
+      height: fit-content;
+      padding: 20px 0px;
+
+      .slide {
+        padding: 10px;
+        margin-inline: 8px;
+
+        .card {
+          background: #ffffff;
+          padding: 20px 8px;
+          border-radius: 6px;
+          box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+          h3 {
+            font-size: 20px;
+            font-weight: 700;
+          }
+        }
       }
     }
-    .link_redirect:hover {
-      background: $color-secondary;
-    }
   }
+}
+
+.link_redirect {
+  background: $color-primary;
+  padding: 8px 12px;
+  border-radius: 14;
+  color: #fff;
+  @media screen and (max-width: 1024px) {
+    display: block;
+  }
+}
+.link_redirect:hover {
+  background: $color-secondary;
 }
 
 .container_character_detail {
